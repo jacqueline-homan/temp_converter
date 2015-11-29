@@ -17,8 +17,8 @@ user = gets.chomp
 	elsif user == "F" 
 		puts "Enter Fahrenheit temp: "
 		F = gets.chomp
-		C = 5/9 * (F.to_i - 32)
-		K = 5/9 * (F.to_i + 459.67) 
+		C = (F.to_i - 32) * 5/9 # If we put the 5/9 first, it won't compute correctly
+		K = (F.to_i + 459.67) * 5/9
 		puts "The temp in Celsius is: ", C
 		puts "The temp in Kelvins is: ", K
 	else
